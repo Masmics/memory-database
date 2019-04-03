@@ -28,14 +28,13 @@ describe('memory-db methods', () => {
   //       name: 'rufus'
   //     };
   //     const newDog = db.create(dog);
-//
-//newDog should hold the returned object with the id in it;
-//from there, bracket notate the id off the store
-
+  //
+  //newDog should hold the returned object with the id in it;
+  //from there, bracket notate the id off the store
   //     expect(db.findById(newDog.id)).toEqual(newDog);
   //   });
 
-  });
 });
+
 
 //findById
