@@ -5,16 +5,22 @@ describe('memory-db methods', () => {
   beforeEach(() => {
     db = new MemoryDatabase();
   });
-  describe('memory database', () => {
+  describe('memory database (create method)', () => {
     it('checks store is instantiated', () => {
-      expect(db.store).toEqual([]);
+      expect(db.store).toEqual({});
     });
     it('can create new items', () => {
       const dog = {
         name: 'rufus'
       };
-      db.create(dog);
-      expect(Object.values(db.store)).toContainEqual(dog);
+      const newDog = db.create(dog);
+      expect(Object.values(db.store)).toContainEqual(newDog);
     });
+    // it('can create unique uuid', () => {
+    //   const dog = {
+    //     name: 'rufus',
+    //     _id: ''
+    //   };
+    // });
   });
 });
