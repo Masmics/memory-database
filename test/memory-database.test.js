@@ -34,6 +34,5 @@ describe('memory-db methods', () => {
     const allDogs = db.find();
     expect(allDogs).toEqual([newDog1, newDog2]);
   });
-  
 
 });
