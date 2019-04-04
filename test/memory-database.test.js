@@ -34,5 +34,14 @@ describe('memory-db methods', () => {
     const allDogs = db.find();
     expect(allDogs).toEqual([newDog1, newDog2]);
   });
+  it('findByIdAndUpdate an object', () => {
+    const dog1 = { name: 'rufus' };
+    const newDog1 = db.create(dog1);
+    const dog2 = { name: 'bortimer' };
+    const newDog2 = db.create(dog2);
+    const findDog = db.findByIdAndUpdate(newDog1._id, newDog2);
+    console.log('store', db.find());
+    expect(findDog).toEqual(newDog2);
+  });
 
 });
