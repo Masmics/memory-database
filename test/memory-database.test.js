@@ -40,11 +40,17 @@ describe('memory-db methods', () => {
     const dog2 = { name: 'bortimer' };
     const newDog2 = db.create(dog2);
     const findDog = db.findByIdAndUpdate(newDog1._id, newDog2);
-    console.log('store', db.find());
     expect(findDog).toEqual(newDog2);
   });
 
-  //findByIdAndDelete
+  it('findByIdAndDeletes an object', () => {
+    const dog = { name: 'rufus' };
+    const newDog = db.create(dog);
+    const deleteDog = db.findByIdAndDelete(newDog._id);
+
+    expect(deleteDog).toEqual(null);
+    
+  });
 
   it('drops all items from database', () => {
     expect(db.store).toEqual({});
