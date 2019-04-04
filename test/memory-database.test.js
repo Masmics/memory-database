@@ -26,5 +26,14 @@ describe('memory-db methods', () => {
       expect(findDog).toEqual(newDog);
     });
   });
+  it('find - lists all objects in the database', () => {
+    const dog1 = { name: 'rufus' };
+    const newDog1 = db.create(dog1);
+    const dog2 = { name: 'mortimer' };
+    const newDog2 = db.create(dog2);
+    const allDogs = db.find();
+    expect(allDogs).toEqual([newDog1, newDog2]);
+  });
+  
 
 });
