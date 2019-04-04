@@ -44,4 +44,10 @@ describe('memory-db methods', () => {
     expect(findDog).toEqual(newDog2);
   });
 
+  //findByIdAndDelete
+
+  it('drops all items from database', () => {
+    expect(db.store).toEqual({});
+  });
+
 });
