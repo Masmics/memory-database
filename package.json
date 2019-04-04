@@ -1,7 +1,6 @@
 {
   "name": "memory-database",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest",
@@ -23,5 +22,10 @@
     "eslint": "^5.16.0",
     "jest": "^24.6.0",
     "uuid": "^3.3.2"
-  }
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "description": ""
 }
